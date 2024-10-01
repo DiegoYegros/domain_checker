@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[
                         logging.FileHandler('subdomain_checker.log'),
-                        logging.StreamHandler() # sends log to stdout in order to  see logs with docker logs.
+                        logging.StreamHandler() # sends log to stdout in order to  see logs with docker logs
                         ])
 
 # Telegram Bot Token and Chat ID
