@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master',
+                git branch: 'main',
                     url: 'https://github.com/diegoyegros/domain_checker.git',
                     credentialsId: 'github-credentials'
             }
@@ -25,4 +25,3 @@ pipeline {
         }
     }
 }
-
