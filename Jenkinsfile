@@ -7,6 +7,24 @@ pipeline {
             defaultValue: 'example1.com,example2.com,example3.com',
             description: 'Comma-separated list of subdomains to monitor.'
         )
+
+        string(
+            name: 'RETRIES',
+            defaultValue: '3',
+            description: 'Amount of retries performed before sending an alert.'
+        )
+
+        string(
+            name: 'SLEEP_TIME',
+            defaultValue: '60',
+            description: 'Amount of time on sleep before pinging the website again.'
+        )
+
+        string(
+            name: 'DELAY_BEFORE_RETRYING',
+            defaultValue: '60',
+            description: 'Delay between retries.'
+        )
     }
 
     environment {
@@ -71,6 +89,9 @@ pipeline {
                                 -e BOT_TOKEN=${BOT_TOKEN} \
                                 -e CHAT_ID=${CHAT_ID} \
                                 -e SUBDOMAINS='${params.SUBDOMAINS}' \
+                                -e SLEEP_TIME='${params.SLEEP_TIME}' \
+                                -e RETRIES='${params.RETRIES}' \
+                                -e DELAY_BEFORE_RETRYING='${params.DELAY_BEFORE_RETRYING}' \
                                 -p 8000:8000 \
                                 ${DOCKER_IMAGE}
                         """

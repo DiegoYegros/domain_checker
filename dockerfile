@@ -16,5 +16,7 @@ RUN touch /var/log/cron.log
 ENV BOT_TOKEN=''
 ENV CHAT_ID=''
 ENV DOMAINS=''
+ENV RETRIES=''
+ENV SLEEP_TIME=''
+ENV DELAY_BEFORE_RETRYING=''
 CMD ["python", "/app/domain-checker.py"]
-
