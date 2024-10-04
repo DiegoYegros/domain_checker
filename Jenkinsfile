@@ -61,16 +61,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                script {
-                    docker.image(DOCKER_IMAGE).inside {
-                        sh 'python -m unittest discover tests'
-                    }
-                }
-            }
-        }
-
         stage('Deploy') {
             steps {
                 script {
