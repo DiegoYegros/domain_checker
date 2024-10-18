@@ -9,13 +9,18 @@ To run the container, you can use the following command, just replace the exampl
 
 ### Must specify
 SUBDOMAINS
+
 BOT_TOKEN
+
 CHAT_ID
 
 #### Default Values
 RETRIES=3
+
 SLEEP_TIME=60 // seconds
+
 DELAY_BEFORE_RETRYING=60 // seconds
+
 REPORT_INTERVAL=86400 // seconds
 
 ```bash
