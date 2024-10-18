@@ -5,7 +5,6 @@ First build the docker image with:
 docker build -t domain-checker .
 ```
 
-To run the container, you can use the following command, just replace the example values:
 
 ### Must specify
 SUBDOMAINS
@@ -22,6 +21,8 @@ SLEEP_TIME=60 // seconds
 DELAY_BEFORE_RETRYING=60 // seconds
 
 REPORT_INTERVAL=86400 // seconds
+
+To run the container, you can use the following command, just replace the example values:
 
 ```bash
 docker run -d \
